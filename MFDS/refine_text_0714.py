@@ -75,10 +75,7 @@ for i in range(len(df)):
             tmp_criteria = '작용원리'
             workdf = pd.DataFrame([[prod['Product'], tmp_criteria, work, pindex, prin['Principle'].lstrip() ]], columns = ['product', 'criteria', 'content', 'criteria_index', 'full_content'], index = [i])
             ndf = ndf.append(workdf) 
-        
-        
-        
-        
+
     elif '개요' in prin['Principle']:
         processed.append(i)
         k += 1
@@ -102,7 +99,6 @@ for i in range(len(df)):
             introdf = pd.DataFrame([[prod['Product'], tmp_criteria, intro, kindex, prin['Principle'].lstrip() ]], columns = ['product', 'criteria', 'content', 'criteria_index', 'full_content'], index = [i])
             ndf = ndf.append(introdf)            
             
-    
     elif i in [187, 198, 256, 296, 311, 351, 407, 413, 420]:
         processed.append(i)
         tindex = prin['Principle'].find('작용 원리')
